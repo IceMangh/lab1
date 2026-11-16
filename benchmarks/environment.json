@@ -1,0 +1,35 @@
+{
+  "measured_at_utc": "2026-11-16T14:40:29.824164+00:00",
+  "system": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "processor": "arm64",
+  "build": "C++20 / CMake Release",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)",
+  "repetitions": 3,
+  "statistic": "median of each operation separately",
+  "seed": 2026,
+  "sizes": [
+    10000,
+    30000,
+    100000,
+    300000,
+    1000000
+  ],
+  "input": "unique integers 0..n-1 shuffled using mt19937",
+  "operations": {
+    "avl": [
+      "Insert",
+      "Contains",
+      "Remove"
+    ],
+    "heap": [
+      "Push",
+      "Top",
+      "Pop"
+    ],
+    "queue": [
+      "Push",
+      "Top",
+      "Pop"
+    ]
+  }
+}
