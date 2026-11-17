@@ -1,0 +1,27 @@
+@startuml
+!pragma layout smetana
+
+skinparam shadowing false
+skinparam dpi 216
+skinparam ranksep 60
+skinparam nodesep 75
+hide empty methods
+
+class "Структура данных" as Structure {
+    - тип элементов
+    - правила хранения
+}
+
+class "Элемент" as Element {
+    + значение
+}
+
+class "Операция" as Operation {
+    + параметры
+    + результат
+}
+
+Structure --> "0..*" Element : содержит
+Structure --> Operation : поддерживает
+Operation -left-> Element : обрабатывает
+@enduml

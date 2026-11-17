@@ -1,0 +1,21 @@
+@startuml
+!pragma layout smetana
+left to right direction
+
+skinparam shadowing false
+skinparam dpi 144
+skinparam roundcorner 10
+skinparam rectangle {
+    BackgroundColor White
+    BorderColor #526984
+    FontColor #223247
+}
+skinparam ArrowColor #526984
+
+rectangle "Интерфейс" as UI
+rectangle "Модуль операций" as Operations
+rectangle "Структуры данных" as Structures
+
+UI --> Operations : операция
+Operations --> Structures : использует
+@enduml
