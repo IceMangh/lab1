@@ -5,23 +5,30 @@ skinparam shadowing false
 skinparam dpi 216
 skinparam ranksep 60
 skinparam nodesep 75
+skinparam class {
+    BackgroundColor White
+    BorderColor #052984
+    FontColor #223247
+}
+skinparam ArrowColor #526984
+hide circle
 hide empty methods
 
-class "Структура данных" as Structure {
-    - тип элементов
-    - правила хранения
+entity "Структура данных" as Structure {
+    тип элементов
+    правила хранения
 }
 
-class "Элемент" as Element {
-    + значение
+entity "Элемент" as Element {
+    значение
 }
 
-class "Операция" as Operation {
-    + параметры
-    + результат
+entity "Операция" as Operation {
+    параметры
+    результат
 }
 
-Structure --> "0..*" Element : содержит
+Structure --> Element : содержит
 Structure --> Operation : поддерживает
-Operation -left-> Element : обрабатывает
+Element <-- Operation : обрабатывает
 @enduml
